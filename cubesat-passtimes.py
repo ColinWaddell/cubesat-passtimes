@@ -13,6 +13,7 @@ import urllib2
 import argparse
 import httplib2
 import MySQLdb
+import settings
 
 if sys.platform in ['linux','linux2']:
     os.system('clear')
@@ -30,15 +31,6 @@ hours = 0
 PassLocationLon = "18.64279"
 PassLocationLat = "-33.932343"
 PassLocationEle = 80
-
-# Your database details
-# Create your table with :
-# create table userYourTableNameHere (ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP, aos TIMESTAMP, los TIMESTAMP, ele INT);
-DBhost="hostname.co.za" # your DB host, usually localhost
-DBuser="username"       # your DB username
-DBpasswd="password"     # your DB password
-DBdb="database"         # name of the database
-DBtable="table"         # name of the database table
 
 print "Platform: %s" % sys.platform
 
