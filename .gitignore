@@ -1,2 +1,4 @@
 *.swp
 dev_settings.py
+*.pyc
+

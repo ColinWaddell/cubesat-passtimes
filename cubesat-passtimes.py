@@ -32,6 +32,18 @@ PassLocationLon = "18.64279"
 PassLocationLat = "-33.932343"
 PassLocationEle = 80
 
+
+DBhost=""   # your DB host, usually localhost
+DBuser=""   # your DB username
+DBpasswd="" # your DB password
+DBdb=""     # name of the database
+DBtable=""  # name of the database table
+
+try:
+   from dev_settings import *
+except ImportError:
+   pass
+
 print "Platform: %s" % sys.platform
 
 def GetTLE():
