@@ -27,8 +27,8 @@ satName = "UKUBE" # or "UKUBE"
 addDateToDB = True
 passes = 0
 hours = 24
-PassLocationLon = "18.64279"
-PassLocationLat = "-33.932343"
+PassLocationLon = "-4.314035"
+PassLocationLat = "55.901353"
 PassLocationEle = 80
 
 
