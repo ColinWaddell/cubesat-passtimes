@@ -13,7 +13,6 @@ import urllib2
 import argparse
 import httplib2
 import MySQLdb
-import settings
 
 if sys.platform in ['linux','linux2']:
     os.system('clear')
@@ -24,10 +23,10 @@ elif sys.platform in ['win32']:
 # for the next n passes or "hours" for the passes during the next n hours
 # "satName" should be a something that can be used to find the TLE by its name
 # "addDateToDB" can be used to control writing to the DB, for testing, currently False
-satName = "ZACUBE" # or "UKUBE"
+satName = "UKUBE" # or "UKUBE"
 addDateToDB = True
-passes = 1
-hours = 0
+passes = 0
+hours = 24
 PassLocationLon = "18.64279"
 PassLocationLat = "-33.932343"
 PassLocationEle = 80
@@ -40,7 +39,7 @@ DBdb=""     # name of the database
 DBtable=""  # name of the database table
 
 try:
-   from dev_settings import *
+   from settings_dev import *
 except ImportError:
    pass
 
@@ -130,8 +129,8 @@ if hours!=0 and passes==0:
         if addDateToDB == True:
             __start = rt
             __end = st
-            __start = __start.timetuple()
-            __end = __end.timetuple()
+            #__start = __start.timetuple()
+            #__end = __end.timetuple()
             addDBentry(__start, __end, math.degrees(ta))
 
 elif passes!=0 and hours==0:
