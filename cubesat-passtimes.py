@@ -88,15 +88,7 @@ for s in str:
             meanmotion = s[2][52:63]
             zacube = ephem.readtle(s[0],s[1],s[2])
 
-#tleLine1 = "2013-066B"
-#tleLine2 = "1 39417U 13066B   13349.05334596  .00003010  00000-0  41766-3 0   762"
-#tleLine3 = "2 39417  97.7974  60.9212 0064739 119.6848 241.0835 14.77205056  3503"
-#zacube = ephem.readtle(tleLine1, tleLine2, tleLine3)
 
-# city = ephem.city('Cape Town')
-# print city.lat, city.lon
-
-#lotime = ephem.localtime(info[0])
 orbitalperiod = (24*60)/float(meanmotion)
 print "Orbital Period: %.1f minutes\n" % orbitalperiod
 location = ephem.Observer()
